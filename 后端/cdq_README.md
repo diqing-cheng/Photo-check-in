@@ -52,7 +52,7 @@ source venv/bin/activate
 
 一旦激活，虚拟环境的bin目录将被添加到$PATH变量的开头。shell的提示符也会改变，它会显示当前使用的虚拟环境的名称。这里是venv
 
-### 6.安装dlib(需要在venv虚拟环境下)
+### 6.安装dlib(需要在venv虚拟环境下，注意，一下命令出现权限不够时，在命令后添加 --user即可)
 
 dlib是一个包含机器学习算法的C++开源工具包
 
@@ -109,7 +109,7 @@ tar -xzvf 文件名.tar.gz
 ```shell
 pip3 install face_recognition -i https://mirrors.aliyun.com/pypi/simple/
 ```
-
+（使用pip list 可以查看相关库是否已经安装成功，安装成功可以看到库名以及版本信息）
 ## 使用方法
 
 ### 命令行界面
@@ -118,7 +118,11 @@ pip3 install face_recognition -i https://mirrors.aliyun.com/pypi/simple/
 
 - `face_recognition` - 在单张图片或一个图片文件夹中认出是谁的脸。
 - `face_detection` - 在单张图片或一个图片文件夹中定位人脸位置。
-
+（如果在命令行使用这两个命令出现：未找到相关命令，说明环境变量未配置，可以通过命令export添加路径
+export PATH=$PATH:/要添加的路径
+或者 
+export PATH=/要添加的路径:$PATH
+注意PATH后没有空格）
 #### 
 
 #### `face_recognition` 命令行工具
