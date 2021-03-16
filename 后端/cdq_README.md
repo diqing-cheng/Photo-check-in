@@ -118,11 +118,11 @@ pip3 install face_recognition -i https://mirrors.aliyun.com/pypi/simple/
 
 - `face_recognition` - 在单张图片或一个图片文件夹中认出是谁的脸。
 - `face_detection` - 在单张图片或一个图片文件夹中定位人脸位置。
-
 （如果在命令行使用这两个命令出现：未找到相关命令，说明环境变量未配置，可以通过命令export添加路径
 export PATH=$PATH:/要添加的路径
-
-或者，export PATH=/要添加的路径:$PATH，注意PATH后没有空格）
+或者 
+export PATH=/要添加的路径:$PATH
+注意PATH后没有空格）
 #### 
 
 #### `face_recognition` 命令行工具
