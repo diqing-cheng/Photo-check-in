@@ -1,7 +1,9 @@
 ubuntu搭建python开发环境
+
 (1)安装IDE，安装的是VScode
-1、从官网下载压缩包
-访问Visual Studio Code官网 https://code.visualstudio.com/docs?dv=linux64
+
+1、从官网下载压缩包,访问Visual Studio Code官网 https://code.visualstudio.com/docs?dv=linux64
+
 2.解压 ,如果文件名不对,可能解压不出来的(扩展名:tar.gz)
 
 tar xzvf + 需要解压的包
