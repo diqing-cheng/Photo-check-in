@@ -29,13 +29,21 @@ vim /usr/share/applications/VSCode.desktop
 然后输入以下文本:
 
 [Desktop Entry]
+
 Name=Visual Studio Code
+
 Comment=Multi-platform code editor for Linux
+
 Exec=/usr/local/VSCode-linux-x64/code
+
 Icon=/usr/share/icons/code.png
+
 Type=Application
+
 StartupNotify=true
+
 Categories=TextEditor;Development;Utility;
+
 MimeType=text/plain;
 
 执行授予执行权限：
