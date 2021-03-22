@@ -20,6 +20,17 @@ python3 --version
 sudo apt-get isntall python3-pip
 ```
 
+将默认的python版本更换为python3
+
+```shell
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 100
+
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 150
+```
+
+
+
+
 ### 3.安装venv
 
 从python3.6开始，创建虚拟环境的推荐方法是使用venv。要安装提供venv模块的python3-venv包，运行以下命令
@@ -72,7 +83,7 @@ sudo apt-get install cmake
 
 ```shell
 pip3 install --upgrade pip
-pip3 install dlib -i https://pypi.douban.com/simple
+pip3 install dlib
 ```
 
 在 Building wheel for dlib 这个环节可能会花上一段时间，需要耐心等待
@@ -80,7 +91,7 @@ pip3 install dlib -i https://pypi.douban.com/simple
 pip更改国内原只需要在平时的命令后加上`-i  *国内源*`,如
 
 ```shell
-pip3 install dlib 
+pip3 install dlib i https://pypi.douban.com/simple
 ```
 
 
@@ -110,9 +121,7 @@ tar -xzvf 文件名.tar.gz
 pip3 install face_recognition -i https://mirrors.aliyun.com/pypi/simple/
 ```
 （使用pip list 可以查看相关库是否已经安装成功，安装成功可以看到库名以及版本信息）
-## 使用方法
-
-### 命令行界面
+### 8.使用方法（命令行界面）
 
 当你安装好了本项目，你可以使用两种命令行工具：
 
@@ -123,9 +132,8 @@ export PATH=$PATH:/要添加的路径
 或者 
 export PATH=/要添加的路径:$PATH
 注意PATH后没有空格）
-#### 
 
-#### `face_recognition` 命令行工具
+`face_recognition` 命令行工具
 
 `face_recognition`命令行工具可以在单张图片或一个图片文件夹中认出是谁的脸。
 
@@ -148,5 +156,37 @@ $ face_recognition ./pictures_of_people_i_know/ ./unknown_pictures/
 
 输出结果的每一行对应着图片中的一张脸，图片名字和对应人脸识别结果用逗号分开。
 
-如果结果输出了`unknown_person`，那么代表这张脸没有对应上已知人脸图片文件夹中的任何一个人。
+如果结果输出了`unknown_person`，那么代表这张脸没有对应上已知人脸图片文件夹中的任何一
+
+### 9. 使用方法（Python）
+
+参考《基于face_recognition的web方案（python）》
+
+### 10. Python链接数据库（MySQL）
+
+#### 1)准备
+
+在系统中安装好Mysql
+MySQL 是最流行的关系型数据库管理系统，如果你不熟悉 MySQL，可以阅读 [MySQL 教程。](https://www.runoob.com/mysql/mysql-tutorial.html)
+
+#### 2)安装mysql-connector
+
+nector** 来连接使用 MySQL， **mysql-connector** 是 **MySQL** 官方提供的驱动器。
+
+我们可以使用 **pip** 命令来安装 **mysql-connector**：
+
+```shell
+python -m pip install mysql-connector
+```
+
+使用以下代码测试 mysql-connector 是否安装成功：
+
+```python
+//demo_mysql_test.py
+import mysql.connector
+```
+
+执行以上代码，如果没有产生错误，表明安装成功。
+
+#### 3)
 
