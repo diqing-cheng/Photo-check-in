@@ -91,7 +91,7 @@ pip3 install dlib
 pip更改国内原只需要在平时的命令后加上`-i  *国内源*`,如
 
 ```shell
-pip3 install dlib i https://pypi.douban.com/simple
+pip3 install dlib -i https://pypi.douban.com/simple
 ```
 
 
